@@ -44,9 +44,9 @@ interface DiscoveryActivated : ApplicationListener<RemoteStatusChangedEvent> {
   private fun disable() = enabled.set(false)
 
   fun ifEnabled(block: () -> Unit) {
-    if (enabled.get()) {
+//    if (enabled.get()) {
       block.invoke()
-    }
+//    }
   }
 
   val log: Logger
